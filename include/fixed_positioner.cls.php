@@ -34,13 +34,13 @@ class Fixed_Positioner extends Positioner {
     $margin_left   = intval($initialcb_style->length_in_pt($initialcb_style->margin_left,   $initialcb["w"]));
     
     // The needed computed style of the element
-    $height = $style->length_in_pt($style->height, $initialcb["h"]);
-    $width  = $style->length_in_pt($style->width,  $initialcb["w"]);
+    $height = intval($style->length_in_pt($style->height, $initialcb["h"]));
+    $width  = intval($style->length_in_pt($style->width,  $initialcb["w"]));
     
-    $top    = $style->length_in_pt($style->top,    $initialcb["h"]);
-    $right  = $style->length_in_pt($style->right,  $initialcb["w"]);
-    $bottom = $style->length_in_pt($style->bottom, $initialcb["h"]);
-    $left   = $style->length_in_pt($style->left,   $initialcb["w"]);
+    $top    = intval($style->length_in_pt($style->top,    $initialcb["h"]));
+    $right  = intval($style->length_in_pt($style->right,  $initialcb["w"]));
+    $bottom = intval($style->length_in_pt($style->bottom, $initialcb["h"]));
+    $left   = intval($style->length_in_pt($style->left,   $initialcb["w"]));
 
     $y = $margin_top;
     if ( isset($top) ) {
