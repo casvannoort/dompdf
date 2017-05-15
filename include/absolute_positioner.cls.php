@@ -94,27 +94,27 @@ class Absolute_Positioner extends Positioner {
       else {
         if ( $orig_height === "auto" ) {
           // C
-          $y += $h - $height - $bottom;
+          $y += intval($h) - intval($height) - intval($bottom);;
         }
         else {
           // G
-          $y += $h - $height - $bottom;
+          $y += $h - intval($height) - intval($bottom);
         }
       }
     }
     else {
       if ( $bottom === "auto" ) {
         // B or F
-        $y += $top;
+        $y += intval($top);
       }
       else {
         if ( $orig_height === "auto" ) {
           // D - TODO change height
-          $y += $top;
+          $y += intval($top);
         }
         else {
           // H - Everything is fixed: top + height win
-          $y += $top;
+          $y += intval($top);
         }
       }
     }
