@@ -28,10 +28,10 @@ class Fixed_Positioner extends Positioner {
     }
 
     // Compute the margins of the @page style
-    $margin_top    = $initialcb_style->length_in_pt($initialcb_style->margin_top,    $initialcb["h"]);
-    $margin_right  = $initialcb_style->length_in_pt($initialcb_style->margin_right,  $initialcb["w"]);
-    $margin_bottom = $initialcb_style->length_in_pt($initialcb_style->margin_bottom, $initialcb["h"]);
-    $margin_left   = $initialcb_style->length_in_pt($initialcb_style->margin_left,   $initialcb["w"]);
+    $margin_top    = intval($initialcb_style->length_in_pt($initialcb_style->margin_top,    $initialcb["h"]));
+    $margin_right  = intval($initialcb_style->length_in_pt($initialcb_style->margin_right,  $initialcb["w"]));
+    $margin_bottom = intval($initialcb_style->length_in_pt($initialcb_style->margin_bottom, $initialcb["h"]));
+    $margin_left   = intval($initialcb_style->length_in_pt($initialcb_style->margin_left,   $initialcb["w"]));
     
     // The needed computed style of the element
     $height = $style->length_in_pt($style->height, $initialcb["h"]);
