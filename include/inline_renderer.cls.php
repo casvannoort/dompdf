@@ -43,6 +43,10 @@ class Inline_Renderer extends Abstract_Renderer {
 
     foreach ($frame->get_children() as $child) {
       list($child_x, $child_y, $child_w, $child_h) = $child->get_padding_box();
+      $child_x = intval($child_x);
+      $child_y = intval($child_y);
+      $child_w = intval($child_w);
+      $child_h = intval($child_h);
       
       if ( !is_null($w) && $child_x < $x + $w ) {
         //This branch seems to be supposed to being called on the first part
